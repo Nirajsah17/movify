@@ -38,6 +38,9 @@ jobs:
             npm run build --prod
           fi
 
+      - name: Create .nojekyll file
+        run: echo "" > ./dist/movify/browser/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
