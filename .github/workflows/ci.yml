@@ -3,13 +3,13 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger deployment on push to the main branch
+      - main
   pull_request:
     branches:
-      - main  # Run the workflow on pull requests to the main branch
+      - main
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -18,35 +18,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Node.js environment (updated to use LTS version)
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Use an even-numbered Node.js LTS version for stability
+          node-version: '18'
 
-      # Install dependencies (if applicable)
       - name: Install dependencies
         run: |
           if [ -f package.json ]; then
             npm install
           fi
 
-      # Build the project
       - name: Build the project
         run: |
           if [ -f package.json ]; then
-            npm run build --prod || echo "Build step completed with warnings/errors"
-          else
-            echo "No build step detected"
+            npm run build --prod
           fi
 
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/movify/browser # Update with the correct path to the built files
+          publish_dir: ./dist/movify/browser
+          publish_branch: gh-pages
