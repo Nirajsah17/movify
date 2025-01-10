@@ -1,0 +1,47 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to the main branch
+  pull_request:
+    branches:
+      - main  # Run the workflow on pull requests to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js environment (optional if your project uses Node.js)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Use a specific Node.js version
+
+      # Install dependencies (if applicable)
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm install
+          fi
+
+      # Build the project
+      - name: Build the project
+        run: |
+          if [ -f package.json ]; then
+            npm run build
+          else
+            echo "No build step detected"
+          fi
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/movify/browser # Specify the directory containing built files (update if different)
