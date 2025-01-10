@@ -1,0 +1,38 @@
+:host {
+  text-align: center;
+}
+
+nz-header,
+nz-footer {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+nz-footer {
+  line-height: 1.5;
+}
+
+nz-sider {
+  background: #3ba0e9;
+  color: #fff;
+  line-height: 120px;
+}
+
+nz-content {
+  color: #fff;
+  min-height: 120px;
+  line-height: 120px;
+  background-image: url('/assets/images/blank_page.png');      
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nz-layout {
+  margin-bottom: 48px;
+}
+
+nz-layout nz-layout,
+nz-layout:last-child {
+  margin: 0;
+}

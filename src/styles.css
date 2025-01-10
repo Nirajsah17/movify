@@ -1,1 +1,138 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  /* Colors */
+  --color-base: #fafafa;
+
+  --color-primary: rgb(139, 61, 255);
+  --color-primary-dark: #4f0cb3;
+
+  --color-secondary: #5c6270;
+  --color-secondary-dark: #32353d;
+  --color-accent: #f0f4f6;
+
+  /* Neutral Colors */
+  --color-black: #32353d;
+  --color-white: #ffffff;
+  --color-gray-300: #ebedef;
+
+  /* Background Colors */
+  --background-color-default: var(--color-white);
+  --background-color-primary: var(--color-primary);
+  --background-color-secondary: var(--color-secondary);
+
+  /* Text Colors */
+  --text-color-default: var(--color-black);
+  --text-color-primary: var(--color-primary);
+  --text-color-secondary: var(--color-secondary);
+
+  /* Font Sizes */
+  --default-font-size: 1.4rem;
+  --font-size-lg: 2.4rem;
+  --font-size-sm: 1.4rem;
+  --font-size-xs: 1.2rem;
+
+  /* Font Family */
+  --font-family-primary: "Open Sans", sans-serif;
+  --font-family-secondary: "Georgia, serif";
+
+  /* Font Weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Border */
+  --border-width: 1px;
+  --border-style: solid;
+  --border-radius: 0.4rem;
+
+  /* Border Colors */
+  --border-color-default: var(--color-gray-300);
+  --border-color-primary: var(--color-primary);
+  --border-color-secondary: var(--color-secondary);
+
+  /* Base padding units in rem */
+  --size-xs: 0.25rem; /* Extra small padding (4px if 1rem = 16px) */
+  --size-sm: 0.5rem; /* Small padding (8px if 1rem = 16px) */
+  --size-md: 1rem; /* Medium padding (16px if 1rem = 16px) */
+  --size-md-2: 1.2rem; /* Medium padding (16px if 1rem = 16px) */
+  --size-lg: 1.5rem; /* Large padding (24px if 1rem = 16px) */
+  --size-xl: 2rem; /* Extra large padding (32px if 1rem = 16px) */
+  --size-none: 0; /* No padding */
+
+  /* Buttons */
+  --button-text-color: #ffffff;
+  --button-border-radius: 4px;
+  --button-padding: 4px;
+  --button-font-size: 14px;
+
+  /* Box Shadow */
+  --shadow-xs: 0 1px 2px rgba(50, 53, 61, 0.16);
+  --shadow-sm: 0 2px 4px rgba(50, 53, 61, 0.16);
+  --shadow-md: 0 4px 8px rgba(50, 53, 61, 0.16);
+
+  /* gap */
+  --gap-xs: 0.4rem;
+  --gap-sm: 0.8rem;
+  --gap-md: 1rem;
+  --gap-lg: 1.5rem;
+  --gap-xl: 2rem;
+
+  /* Global Height Variables */
+  --height-xs: 2.4rem;
+  --height-sm: 3.2rem;
+  --height-lg: 4.0rem;
+  --height-xl: 4.8rem;
+  --height-xxl: 5.6rem;
+
+  /* input variables */
+  --input-border-color: var(--color-gray-300);
+  --input-border-radius: 4px;
+  --input-border-width: 1px;
+  --input-padding: 0.5rem;
+  --input-font-size: 1.4rem;
+  --input-height: 3.2rem;
+  --input-width-lg: 20rem;
+  --input-width-md: 15rem;
+  --input-width-sm-2: 12rem;
+  --input-width-sm: 10rem;
+  --input-width-xs: 8rem;
+
+  /* Icon States */
+  --icon-color-default: var(--color-black);
+  --icon-color-hover: var(--color-primary);
+  --icon-color-active: var(--color-accent);
+  --icon-color-disabled: var(--color-gray-300);
+}
